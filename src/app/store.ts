@@ -1,12 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { tasksReducer } from "features/TodolistsList/tasks.reducer";
-import { todolistsReducer } from "features/TodolistsList/todolists.reducer";
+import { tasksSlice } from "features/TodolistsList/model/tasks/tasksSlice";
+import { todolistsReducer } from "features/TodolistsList/model/todolists/todolists.reducer";
 import { appReducer } from "app/app.reducer";
 import { authSlice } from "features/auth/model/auth.slice";
 
 export const store = configureStore({
   reducer: {
-    tasks: tasksReducer,
+    tasks: tasksSlice,
     todolists: todolistsReducer,
     app: appReducer,
     auth: authSlice,
